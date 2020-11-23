@@ -17,19 +17,25 @@ Part of [EIL ontologies](http://ontology.eil.utoronto.ca/) for Global City Indic
 ### An Ontology for Transportation System (2019)
 
 https://easychair.org/publications/open/8Fls 
+- ![Extended E-R diagram](images/Ontology-for-transportation-systems-2009.png)
 
 ### INSPIRE Transport Networks
 
 [Data specification for Transport Networks](https://inspire.ec.europa.eu/Themes/115/2892)
 - [Technical Guideline](https://inspire.ec.europa.eu/id/document/tg/tn)
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:7:7627)
+  - ![Common Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA6/EA7585.png)
+  - ![Road Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7/EA7630.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd)
 
 #### Dependencies
 
-Network
+![Transport network package dependencies](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7421.png)
+
+Generic Network model
 
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:6:7586)
+  - ![Generic Network Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA3/EA1/EA5/EA9011.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/net/4.0/Network.xsd)
 
 Geographical Name
