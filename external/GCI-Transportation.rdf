@@ -1,0 +1,2235 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl"
+     xmlns:schema="http://schema.org/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:icontact="http://ontology.eil.utoronto.ca/icontact.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:vehicle="http://ontology.eil.utoronto.ca/icity/Vehicle/1.2/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:OM="http://ontology.eil.utoronto.ca/icity/OM/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:wgs="http://ontology.eil.utoronto.ca/icity/wgs/"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:otn="http://www.pms.ifi.uni-muenchen.de/OTN#"
+     xmlns:tc="http://ontology.eil.utoronto.ca/icity/TripCost/1.2/"
+     xmlns:Spatial="http://ontology.eil.utoronto.ca/icity/Spatial/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:mere="http://ontology.eil.utoronto.ca/icity/Mereology/1.0/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:time="http://www.w3.org/2006/time#2016#"
+     xmlns:Geom="http://ontology.eil.utoronto.ca/icity/Geom/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ts="http://ontology.eil.utoronto.ca/icity/TransportationSystem/1.2/">
+    <owl:Ontology rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl">
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/1.2/"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/TripCost/1.2/"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/Foundation/1.2/"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/Trip/1.2/"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/1.2/"/>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transportation Ontology for Global City Indicators</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 14 2018</terms:modified>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark S. Fox
+Wael A. Yousif
+University of Toronto</terms:creator>
+        <adms:relatedDocumentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://eil.mie.utoronto.ca/wp-content/uploads/2015/06/Transportation-Ontology-v11.pdf</adms:relatedDocumentation>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 14 2018</terms:issued>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transportation Ontology for City Indicators developed by the Information Engineering Group, Mechanical &amp;amp; Industrial Engineering, University of Toronto
+
+Extends the Transportation Ontology for Global City Indicators to cover the Transportation Indicators.
+
+Based on the Global City Indicators Facility, University of Toronto: http://www.cityindicators.org/Deliverables/Core%20and%20Supporting%20Indicators%20Table%20SEPTEMBER%202011.pdf.</terms:description>
+        <ns:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright @ 2015 Mark S. Fox</ns:license>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl</vann:preferredNamespaceUri>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gcit</vann:preferredNamespacePrefix>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#airportName -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#airportName">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#arriveAirport -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#arriveAirport">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#backDoorSize -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#backDoorSize">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#bodySize -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#bodySize">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#citiesServed -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#citiesServed">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfArrival -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfArrival">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfDeparture -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfDeparture">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#departAirport -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#departAirport">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distance -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distance">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distanceBetween -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distanceBetween">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#engineType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#engineType">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#forVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#forVehicle">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentDate">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentLocation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasEndLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasEndLocation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityDate">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityLocation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightTime -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightTime">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasOwner">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasRouteDuration -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasRouteDuration">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasSegment -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasSegment">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasStartLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasStartLocation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeight -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeight">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#offRoadCapability -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#offRoadCapability">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#poweredBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#poweredBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderType">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl/arrivalAirport -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl/arrivalAirport">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl/departureAirport -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl/departureAirport">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.geonames.org/hasAirportName -->
+
+    <owl:ObjectProperty rdf:about="https://www.geonames.org/hasAirportName">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#accident_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#accident_Date">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#accident_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#accident_Location">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#backDoorSize -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#backDoorSize">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#bodySize -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#bodySize">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distance_Between -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distance_Between">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#fatality_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#fatality_Date">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#fatality_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#fatality_Location">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasCause -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasCause">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasDescription">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasEngineType -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasEngineType">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightNumber">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasInsuranceProvider -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasInsuranceProvider">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeight">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfAircraft -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfAircraft">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfBuildings -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfBuildings">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfRunways -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfRunways">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#offRoadCapability -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#offRoadCapability">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#ownedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#ownedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#primarilyUsedFor -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#primarilyUsedFor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#reasonForTrip -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#reasonForTrip">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderAge -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderAge">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderStudentStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderStudentStatus">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#travelCost -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#travelCost">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Aircraft -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A vehicle who&apos;s primary mode of travel is via air.</terms:description>
+        <rdfs:label xml:lang="en">Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Airline -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Airline">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/organization.owl#PrivatelyHeldOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Bicycle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">11</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A human powered, two-wheeled vehicle
+
+https://en.wikipedia.org/wiki/Bicycle</terms:description>
+        <rdfs:label xml:lang="en">Bicycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Bus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Bus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle"/>
+        <terms:description xml:lang="en">A road vehicle designed to carry many passengers.
+
+https://en.wikipedia.org/wiki/Bus</terms:description>
+        <rdfs:label xml:lang="en">Bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Commuter_Rail -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Commuter_Rail">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#High_Capacity_PT_Vehicle"/>
+        <terms:description xml:lang="en">A trail transport service that primarily operates between a city centre and suburbs.
+
+https://en.wikipedia.org/wiki/Commuter_rail</terms:description>
+        <rdfs:label xml:lang="en">Commuter Rail</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Drive_Configuration"/>
+        <terms:description xml:lang="en">Stands for front-wheel-drive which means the front 2 wheels of the vehicle are powered by the engine.</terms:description>
+        <rdfs:label xml:lang="en">FWD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Fatality -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Fatality">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <terms:description xml:lang="en">A fatality is defined as a death or severe injury leading to death.</terms:description>
+        <rdfs:label xml:lang="en">Fatality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing">
+        <dc:description xml:lang="en">A class which contains subclasses related to generic transportation and trip classes. Designed for use with the Transportation ontology which defines ISO 37120 transportation classes</dc:description>
+        <rdfs:label xml:lang="en">GCI Transportation Ontology Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Airport -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Airport">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#citiesServed"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.geonames.org/hasAirportName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://geovocab.org/spatial#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfAircraft"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfBuildings"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfRunways"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">An airport is a facility that can store, maintain, and manage aircraft.
+
+https://en.wikipedia.org/wiki/Airport</terms:description>
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Drive_Configuration -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Drive_Configuration">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <terms:description xml:lang="en">This is used to further define the GCI_Vehicle class and distinguish between the different vehicle types.
+
+A drive configuration for example can include 4WD (four-wheel-drive) or 2WD (two-wheel-drive)</terms:description>
+        <rdfs:label xml:lang="en">Drive Configuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Flight -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Flight">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Trip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#arriveAirport"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#departAirport"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasOwner"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Airline"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFlightNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">This class refers to a flight as a subclass of trip. A trip that involves an airplane from Canada to the United States is called a flight. 
+
+It has a starting location, ending location, and must invole minimum 1 aircraft.</terms:description>
+        <rdfs:label xml:lang="en">GCI Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Ground_Clearance -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Ground_Clearance">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <terms:description xml:lang="en">Ground clearance is used to further define the personal vehicles class. 
+
+This refers to the height between the ground and the bottom of a vehicle. This distance is created by the wheels and axles.
+
+For example, trucks typically have a high ground clearance and sport cars have a low ground clearance.</terms:description>
+        <rdfs:label xml:lang="en">GCI Ground Clearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Trip -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Trip">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#visitor"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderType"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#resident"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/Mereology/hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Routes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfArrival"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#dateOfDeparture"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/Trip/endLoc"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/Trip/startLoc"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TripCost/tripCostOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TripCost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#reasonForTrip"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderAge"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#riderStudentStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">A trip is a summation of routes.</dc:description>
+        <rdfs:comment xml:lang="en">expanding on the TripOntologyThing definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">GCI Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <terms:description xml:lang="en">This class exists in the Vehicle Ontology, but it is recreated to capture more relevant properties. The Vehicle Ontology&apos;s Vehicle class has properties concerned with speed, purchase date, and location, but it is more important to have concepts such as the vehicle make, model, year, mode, etc. 
+
+Some of these concepts are captured in the VehiclePD class of the Vehicle Ontology but their class is aimed more towards personal vehicle properties which cannot be used here since the ISO standard defines many vehicles including public transport where some of the personal vehicle properties cannot be used.
+
+Thus, to better capture the properties that is more concerned with the ISO Transportation Ontology, it will be recreated.</terms:description>
+        <rdfs:label xml:lang="en">GCI Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Hatchback -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Hatchback">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">700</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">900</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A car with a hatch-type rear door that opens upwards.
+
+https://en.wikipedia.org/wiki/Hatchback</terms:description>
+        <rdfs:label xml:lang="en">Hatchback</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Heavy_Rail_Metro -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Heavy_Rail_Metro">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#High_Capacity_PT_Vehicle"/>
+        <terms:description xml:lang="en">https://en.wikipedia.org/wiki/Passenger_rail_terminology#Heavy_rail</terms:description>
+        <rdfs:label xml:lang="en">Heavy Rail Metro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#High_Capacity_PT_Vehicle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#High_Capacity_PT_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Public_Transport_Vehicle"/>
+        <terms:description xml:lang="en">A high capacity public transport vehicle may include heavy rail metro, subway, and commuter rail systems as defined by ISO 37120.</terms:description>
+        <rdfs:label xml:lang="en">High capacity public transport vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Public_Transport_Vehicle"/>
+        <terms:description xml:lang="en">A light passenger public transport vehicle may include light rail streetcars and tramways, buses, trolleybuses, or other light passenger transport vehicles as defiend by ISO 37120.</terms:description>
+        <rdfs:label xml:lang="en">Light passenger public transport vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Motorcycle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Motorcycle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">90</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">230</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A two- or three-wheeled motor vehicle.
+
+https://en.wikipedia.org/wiki/Motorcycle</terms:description>
+        <rdfs:label xml:lang="en">Motorcycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleMake"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModelYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasOwner"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/prov#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/hasVehicleType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasInsuranceProvider"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#primarilyUsedFor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A vehicle owned by a private individual and not a company or entity.</terms:description>
+        <rdfs:label xml:lang="en">Personal Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle"/>
+        <rdfs:comment xml:lang="en">Vehicle types vary greatly, to keep things simple, typical vehicle type attributes will be used to distinguish each vehicle type.
+
+For example, typical pickup trucks have 2 doors but extended types exist that have 4 doors and 5 seats. these will be excluded for now but a more robust vehicle ontology should be created that captures every single vehicle type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Personal Vehicle Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#PickupTruck -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#PickupTruck">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RaisedGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#4WD"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8845</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A light-duty truck.
+
+https://en.wikipedia.org/wiki/Pickup_truck</terms:description>
+        <rdfs:label xml:lang="en">Pickup Truck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Public_Transport_Vehicle -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Public_Transport_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Vehicles that are primarily used for public transportation such as buses and trains.</terms:description>
+        <rdfs:label xml:lang="en">Public Transportation Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Drive_Configuration"/>
+        <terms:description xml:lang="en">Stands for rear-wheel-drive which means the rear two wheels of a vehicle are powered by the engine.</terms:description>
+        <rdfs:label xml:lang="en">RWD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RaisedGroundClearance -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RaisedGroundClearance">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Ground_Clearance"/>
+        <terms:description xml:lang="en">This refers to ground clearance that is high, not that it was raised from a preinstalled lower one, which may cause confusion.
+
+In this case, a Truck would have a raised ground clearance.</terms:description>
+        <rdfs:label xml:lang="en">Raised Ground Clearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Ground_Clearance"/>
+        <terms:description xml:lang="en">This refers to ground clearance that is about average. It is not related to how the vehicle was modified, but how it is sold to the customer. 
+
+For example, a Honda Civic would have a regular ground clearance.</terms:description>
+        <rdfs:label xml:lang="en">Regular Ground Clearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RouteCost -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RouteCost">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Monetary_unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The cost of a route.</terms:description>
+        <rdfs:label xml:lang="en">Route Cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Routes -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Routes">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasSegment"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TNSegment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TransportationSystem/hasMode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icity/Vehicle/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/icity/TripCost/tripCostOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RouteCost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasDuration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A route is trip from point A to point B and has at least 1 (or more) transportation network segments.
+
+Although a version of this exists and denoted as Trip within the TripOntologyThing, it was recreated and simplified to better suit the needs of the ISO Standard.</terms:description>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#SUV -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#SUV">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RaisedGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#4WD"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1577</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2460</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A station wagon with off-road vehicle features and raised ground clearance.
+
+https://en.wikipedia.org/wiki/Sport_utility_vehicle</terms:description>
+        <rdfs:label xml:lang="en">SUV (Sports Utility Vehicle)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Sedan -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Sedan">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#4WD"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">700</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1600</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A passenger car with A, B, C pillars.
+
+https://en.wikipedia.org/wiki/Sedan_(automobile)</terms:description>
+        <rdfs:label xml:lang="en">Sedan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Streetcar -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Streetcar">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle"/>
+        <terms:description xml:lang="en">A rail vehicle that runs on tramway tracks along public urban streets.
+
+https://en.wikipedia.org/wiki/Tram</terms:description>
+        <rdfs:label xml:lang="en">Streetcar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Subway -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Subway">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#High_Capacity_PT_Vehicle"/>
+        <terms:description xml:lang="en">A high-capacity public transport that runs in tunnels or elevated railways
+
+https://en.wikipedia.org/wiki/Rapid_transit</terms:description>
+        <rdfs:label xml:lang="en">Subway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TNSegment -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TNSegment">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#forVehicle"/>
+                <owl:allValuesFrom rdf:resource="https://ontology.eil.utoronto.ca/icity/Vehicle/Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#distance_Between"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A version of this exists within the TransportationOntologyThing class, it was recreated and simplified to better suit the ISO standard that it is intended to be used with.
+
+TN stands for Transportation Network. Transportation Network Segment.</terms:description>
+        <rdfs:label xml:lang="en">Transportation Network Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Tramway -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Tramway">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle"/>
+        <terms:description xml:lang="en">Same as streetcar, different name
+
+https://en.wikipedia.org/wiki/Tram</terms:description>
+        <rdfs:label xml:lang="en">Tramway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TripCost -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#TripCost">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Sum_Quantity"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#sum_term"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RouteCost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Monetary_unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The cost of a trip which may include many routes.
+
+For example, a trip from Ajax to Toronto includes 
+* a route (via bus) from the residency, to the train station, 
+* a route (via train)  from the Ajax train station to the Toronto train station,
+* a route (via subway) from the Toronto train station to the desired end point.
+
+All these routes have their own modes of transport and cost. Thus, the trip cost is a summation of all the route costs of a single trip.</terms:description>
+        <rdfs:label xml:lang="en">Trip Cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Trolleybus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Trolleybus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Light_Passenger_PT_Vehicle"/>
+        <terms:description xml:lang="en">An electric bus that draws power from overhead wires.
+
+https://en.wikipedia.org/wiki/Trolleybus</terms:description>
+        <rdfs:label xml:lang="en">Trolleybus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Van -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Van">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Personal_Vehicle_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasGroundClearance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RegularGroundClearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/driveWheelConfiguration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#FWD"/>
+                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#RWD"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasWeightInKg"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3500</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#numberOfWheels"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/numberOfDoors"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vehicleSeatingCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A vehicle that is bigger than a common car.
+
+https://en.wikipedia.org/wiki/Van</terms:description>
+        <rdfs:label xml:lang="en">Van</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleFatality -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleFatality">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#Fatality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#forVehicle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasAccidentLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasFatalityLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasCause"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">A vehicle fatality is a fatality that is caused by, or somehow involves, a vehicle.</terms:description>
+        <rdfs:label xml:lang="en">Vehicle Fatality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleMake -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleMake">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasMake"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The make of a vehicle is the manufacturer. 
+
+For example a 2018 Honda Civic has:
+* Make - Honda,
+* Model - Civic,
+* Model Year - 2018.</terms:description>
+        <rdfs:label xml:lang="en">Vehicle Make</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModel -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModel">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The model of a vehicle is the name of the vehicle. 
+
+For example a 2018 Honda Civic has:
+* Make - Honda,
+* Model - Civic,
+* Model Year - 2018.</terms:description>
+        <rdfs:label xml:lang="en">Vehicle Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModelYear -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#VehicleModelYear">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCITransportationOntologyThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#hasModelYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">The model year is the year the car was manufactured. 
+
+For example a 2018 Honda Civic has:
+* Make - Honda,
+* Model - Civic,
+* Model Year - 2018.</terms:description>
+        <rdfs:label xml:lang="en">Vehicle Model Year</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#4WD -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#4WD">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#GCI_Drive_Configuration"/>
+        <terms:description xml:lang="en">Stands for four-wheel-drive which means all four wheels of a vehicle are powered by the engine</terms:description>
+        <rdfs:label xml:lang="en">4WD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pms.ifi.uni-muenchen.de/OTN#Intersection -->
+
+    <owl:Class rdf:about="http://www.pms.ifi.uni-muenchen.de/OTN#Intersection"/>
+    
+
+
+    <!-- https://ontology.eil.utoronto.ca/icity/MonetaryValue/MonetaryValue -->
+
+    <owl:Class rdf:about="https://ontology.eil.utoronto.ca/icity/MonetaryValue/MonetaryValue">
+        <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.eil.utoronto.ca/icity/Vehicle/Vehicle -->
+
+    <owl:Class rdf:about="https://ontology.eil.utoronto.ca/icity/Vehicle/Vehicle"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#resident -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#resident"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#visitor -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl#visitor"/>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
