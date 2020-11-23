@@ -37,6 +37,7 @@ https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/fi
   - ![Common Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA6/EA7585.png)
   - ![Road Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7/EA7630.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd)
+- [RDF Vocabulary](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/tree/master/tn) encoded from UML using ISO 19150-2 rule
 
 #### Dependencies
 
