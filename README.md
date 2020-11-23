@@ -4,6 +4,9 @@ This repository holds definitions associated with **Roads** as part of the [FSDF
 
 ## Prior art
 
+Most prior work has conceptualized Roads as a special case of a generalized Transportation network, alongside Railways, Air and Water transportation networks. 
+In turn the Transportation network builds on a general network topological model, composed of nodes and segmenets or links. 
+
 ### Ontology of Transportation Networks (2005)
 
 https://www.semanticscholar.org/paper/Ontology-of-Transportation-Networks-Lorenz/636d7965284612377e571ee7d3b3b256aec03fd8
@@ -13,6 +16,8 @@ https://www.semanticscholar.org/paper/Ontology-of-Transportation-Networks-Lorenz
 ### A Transportation Ontology for Global City Indicators (ISO 37120)
 
 Part of [EIL ontologies](http://ontology.eil.utoronto.ca/) for Global City Indicators. 
+- [Transportation Ontology](http://ontology.eil.utoronto.ca/GCI/Transportation/GCI-Transportation.owl) in OWL/RDF format
+- ![EIL Roads in class hierarchy](images/EIL-Roads-hierarchy.png)
 
 ### An Ontology for Transportation System (2019)
 
