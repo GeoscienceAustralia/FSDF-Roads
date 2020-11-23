@@ -24,6 +24,11 @@ Part of [EIL ontologies](http://ontology.eil.utoronto.ca/) for Global City Indic
 https://easychair.org/publications/open/8Fls 
 - ![Extended E-R diagram](images/Ontology-for-transportation-systems-2009.png)
 
+### USGS National Transportation Dataset
+
+https://www.usgs.gov/media/files/national-transportation-dataset-ntd-data-model-poster-v212
+https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/TNM_DataModel_Transportation_v2-1-2__040220.pdf
+
 ### INSPIRE Transport Networks
 
 [Data specification for Transport Networks](https://inspire.ec.europa.eu/Themes/115/2892)
