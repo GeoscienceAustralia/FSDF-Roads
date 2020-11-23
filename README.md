@@ -20,8 +20,8 @@ https://easychair.org/publications/open/8Fls
 
 ### INSPIRE Transport Networks
 
-Data specification for Road transport
-
+[Data specification for Road transport](https://inspire.ec.europa.eu/Themes/115/2892)
+- [Technical Guideline](https://inspire.ec.europa.eu/id/document/tg/tn)
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:7:7627)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd)
 
