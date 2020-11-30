@@ -10,8 +10,8 @@ In turn the Transportation network builds on a general network topological model
 ### USGS National Transportation Dataset
 
 [Website](https://www.usgs.gov/media/files/national-transportation-dataset-ntd-data-model-poster-v212), [Poster](https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/TNM_DataModel_Transportation_v2-1-2__040220.pdf)
-![USGS Catalog view](images/USGS-catalog-view.png)
-![USGS Road Segment](images/USGS-road-segment.png)
+
+![USGS Catalog view](images/USGS-catalog-view.png) ![USGS Road Segment](images/USGS-road-segment.png)
 
 ### INSPIRE Transport Networks
 
