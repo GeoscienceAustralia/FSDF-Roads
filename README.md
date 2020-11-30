@@ -11,13 +11,15 @@ In turn the Transportation network builds on a general network topological model
 
 https://www.usgs.gov/media/files/national-transportation-dataset-ntd-data-model-poster-v212
 https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/TNM_DataModel_Transportation_v2-1-2__040220.pdf
+![USGS Catalog view](images/USGS-catalog-view.png)
+![USGS Road Segment](images/USGS-road-segment.png)
 
 ### INSPIRE Transport Networks
 
 Generic Network model
 
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:6:7586)
-  - ![Generic Network Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA3/EA1/EA5/EA9011.png)
+![Generic Network Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA3/EA1/EA5/EA9011.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/net/4.0/Network.xsd)
 
 ![Transport network package dependencies](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7421.png)
@@ -25,8 +27,8 @@ Generic Network model
 [Data specification for Transport Networks](https://inspire.ec.europa.eu/Themes/115/2892)
 - [Technical Guideline](https://inspire.ec.europa.eu/id/document/tg/tn)
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:7:7627)
-  - ![Common Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA6/EA7585.png)
-  - ![Road Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7/EA7630.png)
+![Common Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA6/EA7585.png)
+![Road Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7/EA7630.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd)
 - [RDF Vocabulary](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/tree/master/tn) encoded from UML using ISO 19150-2 rule
 
