@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+    <style>
+        dt {font-weight: bold;}
+    </style>
+
+
+
+    <dl>
+        <dt><i><a title="{{ hasName['comment'] }}" href="{{ hasName['uri'] }}">{{ hasName['label'] }}</a></i></dt>
+        <dd><h2>{{ hasName['value'] }}</h2></dd>
+
+        <h4>Road {{ id }}</h4>
+        <p><code>{{ uri }}</code></p>
+
+
+        <iframe id="inlineFrameMap"
+            title="Map for {{ hasName['value'] }}"
+            width="1150"
+            height="250"
+            src="{{ url_for('controller.show_map') }}?name={{ hasName['value']|urlencode }}&coords={{ coordinate_list }}">
+
+        </iframe>
+
+        <!--{%  if hasPronunciation is not none %}-->
+        <!--<dt>pronunciation:</dt>-->
+        <!--<dd><em>"{{ hasPronunciation }}"</em></dd>-->
+        <!--{%  endif %}-->
+
+        <dt>Functional Class:</dt>
+        <dd><em>{{ functional_class }}</em></dd>
+        <dt>Surface:</dt>
+        <dd><em>{{ surface }}</em></dd>
+        <dt>Custodian Agency:</dt>
+        <dd><em>{{ custodian_agency }}</em></dd>
+        <dt>State Route Number:</dt>
+        <dd><em>{{ state_route_number }}</em></dd>
+        <dt>Road Direction:</dt>
+        <dd><em>{{ road_direction }}</em></dd>
+        <dt>Speed Limit:</dt>
+        <dd><em>{{ speedlimit }}</em></dd>
+        <dt>Operational Status:</dt>
+        <dd><em>{{ operational_status }}</em></dd>
+        <dt>Traffic Ability:</dt>
+        <dd><em>{{ trafficability }}</em></dd>
+        <dt>National Route Number:</dt>
+        <dd><em>{{ national_route_number }}</em></dd>
+
+        <dt>AusPIX DGGS location (experimental):</dt>
+        <!--<dd><a href="{{ ausPIX_DGGS['uri'] }}">{{ ausPIX_DGGS['label'] }}</a></dd>-->
+
+        <ul>
+        {%- for item in ausPIX_DGGS -%}
+            <dd><a href="{{ item['uri'] }}">{{ item['label'] }}</a></dd>
+        {%- endfor -%}
+        </ul>
+
+
+    </dl>
+    <p>
+        Alternative views and formats for this resource:
+    </p>
+    <ul>
+        <li><a href="?_profile=alt">Alternate profiles</a></li>
+    </ul>
+{% endblock %}
+
+
+
