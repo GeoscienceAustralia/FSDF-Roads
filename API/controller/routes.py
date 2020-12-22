@@ -1,5 +1,5 @@
 from flask import Blueprint, request, Response, render_template
-from model.qld_rds import Qld_rds
+from model.roads import Roads
 from pyldapi import ContainerRenderer
 import conf
 import ast
@@ -14,8 +14,8 @@ def home():
     return render_template('home.html')
 
 
-@routes.route('/qld_rds/')
-def qld_roads():
+@routes.route('/rds/')
+def roads():
     # Search specific items using keywords
     search_string = request.values.get('search')
 
@@ -34,7 +34,7 @@ def qld_roads():
                    if request.values.get('per_page') is not None else DEFAULT_ITEMS_PER_PAGE
         offset = (page - 1) * per_page
 
-        # get the id and name for each placename record in the database
+        # get the id and name for each record in the database
         sql = '''SELECT "id", "name" FROM "transportroads"'''
         if search_string:
             sql += '''WHERE UPPER(cast("id" as text)) LIKE '%{search_string}%' OR UPPER("name") LIKE '%{search_string}%'
@@ -49,12 +49,12 @@ def qld_roads():
             )
     except Exception as e:
         print(e)
-        return Response('The QLD Roads database is offline', mimetype='text/plain', status=500)
+        return Response('The Roads database is offline', mimetype='text/plain', status=500)
 
     return ContainerRenderer(request=request,
                             instance_uri=request.url,
-                            label='QLD Roads Register',
-                            comment='A register of QLD Roads',
+                            label='Roads Register',
+                            comment='A register of Roads',
                             parent_container_uri='http://linked.data.gov.au/def/placenames/PlaceName',
                             parent_container_label='QLD_Roads',
                             members=items,
@@ -96,8 +96,8 @@ def show_map():
     return folium_map.get_root().render()
 
 
-@routes.route('/qld_rds/<string:qld_roads_id>')
-def qld_road(qld_roads_id):
-    qld_roads = Qld_rds(request, request.base_url)
-    return qld_roads.render()
+@routes.route('/rds/<string:roads_id>')
+def road(roads_id):
+    roads = Roads(request, request.base_url)
+    return roads.render()
 

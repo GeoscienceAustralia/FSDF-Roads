@@ -20,7 +20,7 @@ DGGS_uri = 'http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-
 from rhealpixdggs import dggs
 rdggs = dggs.RHEALPixDGGS()
 
-class Qld_rds(Renderer):
+class Roads(Renderer):
     """
     This class represents a placename and methods in this class allow a placename to be loaded from the GA placenames
     database and to be exported in a number of formats including RDF, according to the 'PlaceNames Ontology'
@@ -39,23 +39,23 @@ class Qld_rds(Renderer):
             #     format_list,
             #     'text/html'
             # ),
-            'Qld_rds': Profile(
-                'http://linked.data.gov.au/def/qld_rds/',
-                'QLD roads View',
-                'This view is for QLD roads delivered by the QLD roads dataset'
-                ' in accordance with the QLD Roads Profile',
+            'Roads': Profile(
+                'http://linked.data.gov.au/def/roads/',
+                'Roads View',
+                'This view is for roads delivered by the roads dataset'
+                ' in accordance with the Roads Profile',
                 format_list,
                 'text/html'
             )
         }
 
-        super(Qld_rds, self).__init__(request, uri, views, 'Qld_rds')
+        super(Roads, self).__init__(request, uri, views, 'Roads')
 
         self.id = uri.split('/')[-1]
 
         self.hasName = {
-            'uri': 'http://linked.data.gov.au/def/qld_rds/',
-            'label': 'QLD Roads:',
+            'uri': 'http://linked.data.gov.au/def/roads/',
+            'label': 'Roads:',
             'comment': 'The Entity has a name (label) which is a text sting.',
             'value': None
         }
@@ -191,8 +191,8 @@ class Qld_rds(Renderer):
             return self.export_html(self.profile)
 
 
-    def export_html(self, model_view='Qld_roads'):
-        html_page = 'qld_roads.html'
+    def export_html(self, model_view='Roads'):
+        html_page = 'roads.html'
         return Response(        # Response is a Flask class imported at the top of this script
             render_template(     # render_template is also a Flask module
                 html_page,   # uses the html template to send all this data to it.
