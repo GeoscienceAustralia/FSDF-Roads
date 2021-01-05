@@ -8,17 +8,18 @@ from rdflib import Graph, URIRef, RDF, Namespace, Literal, BNode
 from rdflib.namespace import XSD   #imported for 'export_rdf' function
 
 from .gazetteer import GAZETTEERS, NAME_AUTHORITIES
+from .dggs_in_line import get_cells_in_json_and_return_in_json
 
 # for DGGSC:C zone attribution
-import json
 import requests
 import ast
-# DGGS_API_URI = "http://ec2-3-26-44-145.ap-southeast-2.compute.amazonaws.com/api/search/"
-DGGS_API_URI = "https://dggs.loci.cat/api/search/"
+DGGS_API_URI = "http://ec2-3-26-44-145.ap-southeast-2.compute.amazonaws.com/api/search/"
+test_DGGS_API_URI = "https://dggs.loci.cat/api/search/"
 DGGS_uri = 'http://ec2-52-63-73-113.ap-southeast-2.compute.amazonaws.com/AusPIX-DGGS-dataset/ausPIX/'
 
 from rhealpixdggs import dggs
 rdggs = dggs.RHEALPixDGGS()
+
 
 class Roads(Renderer):
     """
@@ -174,8 +175,12 @@ class Roads(Renderer):
                 ]
             }
 
-            res = requests.post('{}find_dggs_by_geojson'.format(DGGS_API_URI), params=dggs_api_param, json=geo_json)
-            self.listOfCells = res.json()['dggs_cells']
+            try:
+                res = requests.post('{}find_dggs_by_geojson'.format(DGGS_API_URI), params=dggs_api_param, json=geo_json)
+                self.listOfCells = res.json()['dggs_cells']
+            except:
+                self.listOfCells = get_cells_in_json_and_return_in_json(geo_json, dggs_api_param['resolution'],
+                                                                    dggs_api_param['dggs_as_polygon'])['dggs_cells']
 
             for cell in self.listOfCells:
                 self.thisLine.append({'label': str(cell),
