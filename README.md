@@ -20,6 +20,7 @@ Generic Network model
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:6:7586)
 ![Generic Network Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA3/EA1/EA5/EA9011.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/net/4.0/Network.xsd)
+- [FSDF network ontology](https://github.com/GeoscienceAustralia/FSDF/blob/master/rdf/network.ttl) is summarized in this figure: ![FSDF Network ontology](https://raw.githubusercontent.com/GeoscienceAustralia/FSDF/master/images/FSDF-net-ontology.png)
 
 ![Transport network package dependencies](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7421.png)
 
