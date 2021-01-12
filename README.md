@@ -20,7 +20,7 @@ Generic Network model
 - [UML Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/index.htm?goto=2:1:9:6:7586)
 ![Generic Network Model](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA3/EA1/EA5/EA9011.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/net/4.0/Network.xsd)
-- [FSDF network ontology](https://github.com/GeoscienceAustralia/FSDF/blob/master/rdf/network.ttl) is summarized in this figure: ![FSDF Network ontology](https://raw.githubusercontent.com/GeoscienceAustralia/FSDF/master/images/FSDF-net-ontology.png)
+- [FSDF network ontology](https://github.com/GeoscienceAustralia/FSDF/blob/master/rdf/network.ttl) adapted from INSPIRE model is summarized in this figure: ![FSDF Network ontology](https://raw.githubusercontent.com/GeoscienceAustralia/FSDF/master/images/FSDF-net-ontology.png)
 
 ![Transport network package dependencies](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7421.png)
 
@@ -31,6 +31,8 @@ Generic Network model
 ![Road Transport Elements](https://inspire.ec.europa.eu/data-model/approved/r4618-ir/html/EARoot/EA2/EA1/EA9/EA7/EA7630.png)
 - [XML Schema](https://inspire.ec.europa.eu/schemas/tn-ro/4.0/RoadTransportNetwork.xsd)
 - [RDF Vocabulary](https://github.com/inspire-eu-rdf/inspire-rdf-vocabularies/tree/master/tn) encoded from UML using ISO 19150-2 rule
+
+Note that INSPIRE uses an intermediate generic Transport model between the Network model and the application models. It is not clear what is enabled by this extra layer. 
 
 Geographical Name
 
