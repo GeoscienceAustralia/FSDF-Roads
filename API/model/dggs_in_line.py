@@ -154,6 +154,8 @@ def reduce_duplicate_cells_1d_array(cells):
 def get_cells_in_json_and_return_in_json(geo_json, resolution, if_polygon):
     cells = get_cells_in_geojson(geo_json, resolution, if_polygon)
     cells = reduce_duplicate_cells_1d_array(cells)
+    # import pdb
+    # pdb.set_trace()
     meta = {
         "cells_count": len(cells)
     }
